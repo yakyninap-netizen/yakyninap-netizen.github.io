@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Грани Холода — промышленное холодильное оборудование</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo-wrap">
+      <img src="logo.svg" alt="Грани Холода" class="logo-icon">
+      <span class="logo-text">ГРАНИ ХОЛОДА</span>
+    </a>
+    <nav>
+      <a href="#about">О компании</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
+      <button onclick="toggleLang()">EN</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 data-ru="Промышленное холодильное оборудование" data-en="Industrial Refrigeration Equipment">
+      Промышленное холодильное оборудование
+    </h1>
+    <p data-ru="Проектирование · Производство · Сервис · Диагностика"
+       data-en="Design · Manufacturing · Service · Diagnostics">
+      Проектирование · Производство · Сервис · Диагностика
+    </p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 data-ru="О компании" data-en="About the company">О компании</h2>
+    <p data-ru="«Грани Холода» — компания, специализирующаяся на промышленных системах охлаждения."
+       data-en="Grani Kholoda specializes in industrial cooling systems.">
+      «Грани Холода» — компания, специализирующаяся на промышленных системах охлаждения.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="section gray">
+  <div class="container">
+    <h2 data-ru="Услуги" data-en="Services">Услуги</h2>
+    <div class="grid">
+      <div data-ru="Проектирование" data-en="Engineering design">Проектирование</div>
+      <div data-ru="Производство" data-en="Manufacturing">Производство</div>
+      <div data-ru="Сервис" data-en="Service">Сервис</div>
+      <div data-ru="Диагностика" data-en="Diagnostics">Диагностика</div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="section">
+  <div class="container">
+    <h2 data-ru="Контакты" data-en="Contacts">Контакты</h2>
+
+    <form class="contact-form" action="https://formspree.io/f/XXXXXXX" method="POST">
+      <input type="text" name="name" placeholder="Имя / Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Сообщение / Message" required></textarea>
+      <button type="submit">Отправить / Send</button>
+    </form>
+
+    <p class="note">
+      Email: *****@*****<br>
+      Телефон: +** *** *** ** **<br>
+      Город: *****
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    © Грани Холода
+  </div>
+</footer>
+
+<script>
+let lang = "ru";
+function toggleLang() {
+  lang = lang === "ru" ? "en" : "ru";
+  document.querySelectorAll("[data-ru]").forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+}
+</script>
+</body>
+</html>
