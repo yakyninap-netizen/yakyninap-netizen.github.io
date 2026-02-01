@@ -115,3 +115,18 @@ nav a {
   font-size: 13px;
   color: #6b7280;
 }
+.logo-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact-form button {
+  font-size: 14px;
+  padding: 10px 14px;
+}
