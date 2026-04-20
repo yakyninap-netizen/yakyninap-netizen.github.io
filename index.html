@@ -6,8 +6,7 @@
 <title>Грани Холода</title>
 
 <link rel="icon" href="favicon.svg">
-<link rel="stylesheet" href="style.css?v=30">
-
+<link rel="stylesheet" href="style.css?v=40">
 </head>
 <body>
 
@@ -35,14 +34,26 @@
     <h1>95% ремонтов — в день обращения</h1>
 
     <p class="hero-sub">
-      2500+ единиц оборудования · 99% запчастей в наличии
+      Обслуживаем более 2500 единиц оборудования
     </p>
 
     <div class="stats">
-      <div><strong>25+</strong><span>лет</span></div>
-      <div><strong>2500+</strong><span>единиц</span></div>
-      <div><strong>95%</strong><span>в день</span></div>
-      <div><strong>99%</strong><span>в наличии</span></div>
+
+      <div class="stat">
+        <div class="num">25+</div>
+        <div class="label">лет опыта</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">95%</div>
+        <div class="label">заявок в день обращения</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">99%</div>
+        <div class="label">запчастей в наличии</div>
+      </div>
+
     </div>
 
   </div>
@@ -63,17 +74,17 @@
 
         <div class="client">
           <div class="client-num">150+</div>
-          <div class="client-text">Грош</div>
+          <div class="client-text">точек «Грош»</div>
         </div>
 
         <div class="client">
           <div class="client-num">100+</div>
-          <div class="client-text">Палыч</div>
+          <div class="client-text">точек «Палыч»</div>
         </div>
 
         <div class="client">
           <div class="client-num">2500+</div>
-          <div class="client-text">единиц оборудования</div>
+          <div class="client-text">в обслуживании</div>
         </div>
 
       </div>
@@ -181,9 +192,7 @@ const els = document.querySelectorAll('.section, .hero, .card');
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('show');
-    }
+    if (e.isIntersecting) e.target.classList.add('show');
   });
 }, { threshold: 0.15 });
 
