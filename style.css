@@ -101,3 +101,43 @@ nav a {
   margin-top: 40px;
   font-size: 12px;
 }
+
+/* HEADER COLOR */
+.header {
+  background: #0f172a;
+  border-bottom: none;
+}
+
+.header a,
+.logo-text {
+  color: #fff;
+}
+
+/* ACCENT COLOR */
+button,
+.contact-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* HOVER LINKS */
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* ANIMATION BASE */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
