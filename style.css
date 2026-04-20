@@ -1,146 +1,194 @@
-body {
-  font-family: Inter, sans-serif;
-  color: #111;
-  margin: 0;
+:root {
+  --bg: #020617;
+  --bg-soft: #0b1220;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
 }
 
-/* Layout */
+/* RESET */
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
 
-.narrow {
-  max-width: 700px;
-}
-
-/* Header */
+/* HEADER */
 .header {
-  background: #020617;
-  color: #fff;
+  background: rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 70px;
 }
 
 .logo-icon {
-  width: 20px;
+  width: 22px;
 }
 
 .logo-text {
   font-size: 13px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  color: #fff;
 }
 
+/* NAV */
 nav a {
-  color: #fff;
-  margin-left: 20px;
+  color: var(--muted);
+  margin-left: 24px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 /* HERO */
 .hero {
-  padding: 120px 0;
-  background: radial-gradient(circle at 20% 20%, rgba(37,99,235,0.15), transparent);
+  padding: 140px 0 120px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(59,130,246,0.25), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(59,130,246,0.1), transparent 40%);
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 54px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 .hero-sub {
-  color: #555;
-  margin-bottom: 40px;
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 50px;
 }
 
+/* STATS */
 .stats {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .stats strong {
-  font-size: 28px;
+  font-size: 32px;
+  color: #fff;
 }
 
 .stats span {
   display: block;
-  font-size: 12px;
-  color: #777;
+  font-size: 13px;
+  color: var(--muted);
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
-.gray {
-  background: #f5f7fa;
+.section.gray {
+  background: var(--bg-soft);
 }
 
-/* Trust */
+/* HEADINGS */
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 10px;
+}
+
+/* TRUST */
 .trust {
   text-align: center;
 }
 
 .trust-text {
-  color: #666;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-/* Cards */
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 20px;
+  gap: 24px;
+  margin-top: 30px;
 }
 
 .card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 22px;
+  background: rgba(255,255,255,0.02);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #2563eb;
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.15);
 }
 
-/* List */
+/* LIST */
 .list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: var(--muted);
 }
 
-/* Contact */
+/* CONTACT */
 .contact-wrap {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 6px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: #fff;
 }
 
 .contact-form button {
-  background: #2563eb;
+  background: var(--accent);
   color: #fff;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Footer */
+.contact-form button:hover {
+  background: #2563eb;
+}
+
+/* FOOTER */
 .footer {
-  background: linear-gradient(180deg, #020617, #0f172a);
-  color: #e5e7eb;
-  padding: 80px 0 30px;
+  background: #010409;
+  padding: 90px 0 30px;
 }
 
 .footer-inner {
@@ -149,20 +197,25 @@ nav a {
 }
 
 .footer h4 {
-  color: #93c5fd;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: var(--muted);
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 40px;
-  color: #666;
+  margin-top: 50px;
+  color: #6b7280;
 }
 
-/* Animation */
+/* ANIMATION */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  transform: translateY(50px);
+  transition: all 0.9s cubic-bezier(0.22,1,0.36,1);
 }
 
 .fade-up.show {
