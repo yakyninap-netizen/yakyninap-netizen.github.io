@@ -145,5 +145,22 @@
   </div>
 </footer>
 
+  <script>
+const faders = document.querySelectorAll('.section, .hero');
+
+const appear = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+faders.forEach(el => {
+  el.classList.add('fade');
+  appear.observe(el);
+});
+</script>
+
 </body>
 </html>
