@@ -1,457 +1,156 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Грани Холода — обслуживание и ремонт холодильного оборудования</title>
 
-<title>Грани Холода — промышленное холодильное оборудование</title>
-
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-color:#222;
-line-height:1.6;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-.header{
-background:#0f172a;
-color:white;
-padding:15px 0;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.header .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo-wrap{
-display:flex;
-align-items:center;
-text-decoration:none;
-color:white;
-font-weight:700;
-}
-
-.logo-icon{
-width:32px;
-margin-right:10px;
-}
-
-nav a{
-margin-left:20px;
-color:white;
-text-decoration:none;
-font-size:14px;
-}
-
-nav button{
-margin-left:20px;
-padding:6px 12px;
-border:none;
-background:#2563eb;
-color:white;
-cursor:pointer;
-}
-
-.hero{
-background:#0f172a;
-color:white;
-padding:90px 0;
-text-align:center;
-}
-
-.hero h1{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.9;
-}
-
-.hero-buttons{
-margin-top:30px;
-}
-
-.hero-buttons a{
-background:#2563eb;
-padding:12px 25px;
-color:white;
-text-decoration:none;
-margin:10px;
-display:inline-block;
-}
-
-.section{
-padding:70px 0;
-}
-
-.section.gray{
-background:#f3f4f6;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:6px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-text-align:center;
-}
-
-.step{
-background:white;
-padding:20px;
-border-radius:6px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.project{
-background:white;
-padding:20px;
-border-radius:6px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-.contact-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-padding:10px;
-border:1px solid #ddd;
-}
-
-.contact-form button{
-padding:12px;
-border:none;
-background:#2563eb;
-color:white;
-cursor:pointer;
-}
-
-.note{
-text-align:center;
-margin-top:30px;
-}
-
-.footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:50px;
-}
-
-</style>
-
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
+
 <body>
 
 <header class="header">
-<div class="container">
+  <div class="container header-inner">
+    <a href="#" class="logo-wrap">
+      <img src="logo.svg" class="logo-icon">
+      <span class="logo-text">ГРАНИ ХОЛОДА</span>
+    </a>
 
-<a href="#" class="logo-wrap">
-<img src="logo.svg" alt="Грани Холода" class="logo-icon">
-<span>ГРАНИ ХОЛОДА</span>
-</a>
-
-<nav>
-<a href="#about">О компании</a>
-<a href="#equipment">Оборудование</a>
-<a href="#services">Услуги</a>
-<a href="#projects">Проекты</a>
-<a href="#contacts">Контакты</a>
-<button onclick="toggleLang()">EN</button>
-</nav>
-
-</div>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#about">О компании</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div class="container">
+  <div class="container">
+    <h1>Обслуживание и ремонт промышленного холодильного оборудования</h1>
 
-<h1
-data-ru="Промышленное холодильное оборудование"
-data-en="Industrial Refrigeration Equipment">
-Промышленное холодильное оборудование
-</h1>
+    <p class="hero-sub">
+      Скорость, опыт и наличие. Более 2500 единиц оборудования в обслуживании.
+    </p>
 
-<p
-data-ru="Проектирование · Поставка · Монтаж · Срочный ремонт"
-data-en="Design · Supply · Installation · Emergency Service">
-Проектирование · Поставка · Монтаж · Срочный ремонт
-</p>
+    <div class="stats">
+      <div class="stat">25+<span>лет на рынке</span></div>
 
-<div class="hero-buttons">
-<a href="#contacts"
-data-ru="Получить консультацию"
-data-en="Get consultation">
-Получить консультацию
-</a>
+      <div class="stat tooltip">
+        95%
+        <span>заявок в день</span>
+        <div class="tooltip-box">
+          95% заявок выполняются в день обращения.<br>
+          5% — до 2 дней (редкое оборудование или сложные случаи).
+        </div>
+      </div>
 
-<a href="#services"
-data-ru="Наши услуги"
-data-en="Our services">
-Наши услуги
-</a>
-</div>
-
-</div>
+      <div class="stat">99%<span>запчастей в наличии</span></div>
+      <div class="stat">2500+<span>единиц на обслуживании</span></div>
+    </div>
+  </div>
 </section>
 
-<section id="about" class="section">
-<div class="container">
-
-<h2
-data-ru="О компании"
-data-en="About the company">
-О компании
-</h2>
-
-<p
-data-ru="«Грани Холода» — компания, специализирующаяся на промышленных системах охлаждения, поставке оборудования и сервисном обслуживании холодильных установок."
-data-en="Grani Kholoda specializes in industrial refrigeration systems, equipment supply and service.">
-«Грани Холода» — компания, специализирующаяся на промышленных системах охлаждения.
-</p>
-
-</div>
+<!-- EXPERIENCE -->
+<section class="section" id="about">
+  <div class="container narrow">
+    <h2>Опыт, который снижает простои</h2>
+    <p>
+      Более 25 лет опыта у специалистов. Работаем с крупными сетями:
+      Грош — 150 точек, Палыч — 100 точек.
+      В среднем 8–10 единиц оборудования на объект.
+    </p>
+  </div>
 </section>
 
-<section id="equipment" class="section gray">
-<div class="container">
+<!-- MAIN SERVICE -->
+<section class="section gray" id="services">
+  <div class="container narrow">
+    <h2>Обслуживание и ремонт — основа работы</h2>
+    <p>
+      Основной фокус — поддержание оборудования в рабочем состоянии без простоев.
+    </p>
 
-<h2
-data-ru="Типы оборудования"
-data-en="Equipment">
-Типы оборудования
-</h2>
-
-<div class="grid">
-
-<div class="card">Холодильные камеры</div>
-<div class="card">Морозильные камеры</div>
-<div class="card">Компрессорные агрегаты</div>
-<div class="card">Чиллеры</div>
-<div class="card">Холодильные витрины</div>
-<div class="card">Складские системы охлаждения</div>
-
-</div>
-
-</div>
+    <div class="list">
+      <div>Диагностика</div>
+      <div>Ремонт</div>
+      <div>Регулярное обслуживание</div>
+      <div>Аварийные выезды</div>
+    </div>
+  </div>
 </section>
 
-<section id="services" class="section">
-<div class="container">
-
-<h2
-data-ru="Услуги"
-data-en="Services">
-Услуги
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>Проектирование</strong>
-<p>Разработка систем промышленного охлаждения.</p>
-</div>
-
-<div class="card">
-<strong>Поставка оборудования</strong>
-<p>Подбор и поставка холодильных агрегатов.</p>
-</div>
-
-<div class="card">
-<strong>Монтаж</strong>
-<p>Установка и пуско-наладка оборудования.</p>
-</div>
-
-<div class="card">
-<strong>Сервис</strong>
-<p>Техническое обслуживание и диагностика.</p>
-</div>
-
-<div class="card">
-<strong>Срочный ремонт</strong>
-<p>Выезд инженера и ремонт оборудования.</p>
-</div>
-
-<div class="card">
-<strong>Модернизация</strong>
-<p>Обновление и улучшение холодильных систем.</p>
-</div>
-
-</div>
-
-</div>
+<!-- SPEED -->
+<section class="section">
+  <div class="container narrow">
+    <h2>Скорость за счёт наличия</h2>
+    <p>
+      99% запчастей в наличии. Собственный запас оборудования —
+      без заморозки средств клиента.
+    </p>
+  </div>
 </section>
 
+<!-- EXTRA -->
 <section class="section gray">
+  <div class="container narrow">
+    <h2>Дополнительно</h2>
 
-<div class="container">
+    <div class="grid">
+      <div>
+        <strong>Поставка и монтаж</strong>
+        <p>Подбор, поставка и подключение оборудования.</p>
+      </div>
 
-<h2
-data-ru="Как мы работаем"
-data-en="How we work">
-Как мы работаем
-</h2>
-
-<div class="steps">
-
-<div class="step">
-1<br>
-Заявка или звонок
-</div>
-
-<div class="step">
-2<br>
-Диагностика и расчет
-</div>
-
-<div class="step">
-3<br>
-Подбор оборудования
-</div>
-
-<div class="step">
-4<br>
-Монтаж или ремонт
-</div>
-
-</div>
-
-</div>
-
+      <div>
+        <strong>Производство</strong>
+        <p>Изготовление отдельных узлов и компонентов.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="projects" class="section">
-
-<div class="container">
-
-<h2
-data-ru="Примеры проектов"
-data-en="Projects">
-Примеры проектов
-</h2>
-
-<div class="projects">
-
-<div class="project">
-Склад заморозки — монтаж холодильной системы
-</div>
-
-<div class="project">
-Супермаркет — установка холодильных витрин
-</div>
-
-<div class="project">
-Производство — установка промышленного чиллера
-</div>
-
-</div>
-
-</div>
-
+<!-- PRICING -->
+<section class="section">
+  <div class="container narrow">
+    <h2>Понятная стоимость ремонта</h2>
+    <p>
+      Стоимость формируется из конкретных операций и деталей.
+      Без скрытых работ и необоснованных наценок.
+    </p>
+  </div>
 </section>
 
-<section id="contacts" class="section gray">
+<!-- CONTACTS -->
+<section class="section gray" id="contacts">
+  <div class="container narrow">
+    <h2>Контакты</h2>
 
-<div class="container">
+    <form class="contact-form"
+          action="https://formspree.io/f/mnjzoaqz"
+          method="POST">
 
-<h2
-data-ru="Контакты"
-data-en="Contacts">
-Контакты
-</h2>
+      <input type="text" name="name" placeholder="Имя" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Сообщение" required></textarea>
 
-<form class="contact-form" action="https://formspree.io/f/mnjzoaqz" method="POST">
+      <button type="submit">Отправить</button>
+    </form>
 
-<input type="text" name="name" placeholder="Имя / Name" required>
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea name="message" placeholder="Сообщение / Message" required></textarea>
-
-<button type="submit">
-Отправить / Send
-</button>
-
-</form>
-
-<p class="note">
-Email: <a href="mailto:proholod163@mail.ru">proholod163@mail.ru</a><br>
-Телефон: +7 917 158 13 64<br>
-Самара
-</p>
-
-</div>
-
+    <p class="note">
+      Email: <a href="mailto:info@yourmail.com">info@yourmail.com</a><br>
+      Город: ваш город
+    </p>
+  </div>
 </section>
 
 <footer class="footer">
-<div class="container">
-© Грани Холода
-</div>
+  <div class="container">
+    © Грани Холода
+  </div>
 </footer>
-
-<script>
-
-let lang="ru";
-
-function toggleLang(){
-
-lang = lang === "ru" ? "en" : "ru";
-
-document.querySelectorAll("[data-ru]").forEach(el=>{
-el.textContent = el.dataset[lang];
-});
-
-}
-
-</script>
 
 </body>
 </html>
