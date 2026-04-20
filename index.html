@@ -6,7 +6,7 @@
 <title>Грани Холода</title>
 
 <link rel="icon" href="favicon.svg">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=10">
 
 </head>
 <body>
@@ -29,22 +29,39 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Обслуживание и ремонт холодильного оборудования</h1>
-    <p class="sub">2500+ единиц на обслуживании. 95% заявок — в день обращения.</p>
+
+    <h1>95% ремонтов — в день обращения</h1>
+
+    <p class="hero-sub">
+      2500+ единиц оборудования на обслуживании.  
+      99% запчастей в наличии.
+    </p>
 
     <div class="stats">
       <div><strong>25+</strong><span>лет на рынке</span></div>
       <div><strong>2500+</strong><span>единиц</span></div>
-      <div><strong>99%</strong><span>запчастей в наличии</span></div>
+      <div><strong>95%</strong><span>в день обращения</span></div>
+      <div><strong>99%</strong><span>в наличии</span></div>
     </div>
+
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section trust">
+  <div class="container">
+    <h2>Работаем с сетями</h2>
+    <p class="trust-text">
+      Грош — 150 точек · Палыч — 100 точек  
+      8–10 единиц оборудования на объект
+    </p>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
   <div class="container">
-    <h2>Основное направление</h2>
-    <p class="desc">Обслуживание и ремонт — 70% нашей работы.</p>
+    <h2>Обслуживание и ремонт</h2>
 
     <div class="cards">
       <div class="card">Диагностика</div>
@@ -61,18 +78,14 @@
     <h2>Официальный дилер оборудования</h2>
 
     <p>
-      Работаем напрямую с двумя заводами-производителями.
-      Поставляем оборудование, комплектующие и узлы без посредников.
-    </p>
-
-    <p>
-      Это позволяет:
+      Работаем напрямую с заводами. Поставляем оборудование,
+      комплектующие и узлы без посредников.
     </p>
 
     <ul class="list">
-      <li>сократить сроки поставки</li>
-      <li>держать оборудование в наличии</li>
-      <li>не замораживать бюджет клиента</li>
+      <li>сокращение сроков поставки</li>
+      <li>наличие оборудования</li>
+      <li>без заморозки бюджета клиента</li>
     </ul>
   </div>
 </section>
@@ -82,8 +95,8 @@
   <div class="container narrow">
     <h2>Скорость за счёт наличия</h2>
     <p>
-      95% заявок выполняем в день обращения.
-      Остальные — до 2 дней из-за редкого оборудования или сложных случаев.
+      95% заявок выполняем в день обращения.  
+      5% — до 2 дней (редкое оборудование или сложные случаи).
     </p>
   </div>
 </section>
@@ -91,6 +104,7 @@
 <!-- CONTACT -->
 <section class="section gray" id="contacts">
   <div class="container">
+
     <h2>Связаться</h2>
 
     <div class="contact-wrap">
@@ -107,12 +121,12 @@
       </form>
 
       <div class="contact-info">
-        <!-- ВАЖНО: ТУТ ТВОИ ДАННЫЕ УЖЕ ПОДСТАВЛЕНЫ С ПРЕДЫДУЩЕГО САЙТА -->
         <p><strong>Email:</strong> info@yourmail.com</p>
         <p><strong>Город:</strong> ваш город</p>
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -122,7 +136,7 @@
 
     <div class="footer-col">
       <div class="logo-text">ГРАНИ ХОЛОДА</div>
-      <p>Обслуживание и ремонт холодильного оборудования</p>
+      <p>Обслуживание и ремонт оборудования</p>
     </div>
 
     <div class="footer-col">
@@ -145,20 +159,20 @@
   </div>
 </footer>
 
-  <script>
-const faders = document.querySelectorAll('.section, .hero');
+<script>
+const els = document.querySelectorAll('.section, .hero, .card');
 
-const appear = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('show');
     }
   });
-});
+}, { threshold: 0.15 });
 
-faders.forEach(el => {
-  el.classList.add('fade');
-  appear.observe(el);
+els.forEach(el => {
+  el.classList.add('fade-up');
+  obs.observe(el);
 });
 </script>
 
