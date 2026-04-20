@@ -182,3 +182,48 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ГЛОБАЛЬНЫЕ ОТСТУПЫ МЕЖДУ СЕКЦИЯМИ */
+.section {
+  padding: 120px 0;
+}
+
+/* УСИЛЕННЫЙ ОТСТУП ПОСЛЕ HERO */
+.hero {
+  margin-bottom: 60px;
+}
+
+/* КОНКРЕТНО: сетевые объекты → услуги */
+.clients {
+  margin-bottom: 80px;
+}
+
+/* КОНКРЕТНО: дилер → контакты */
+#dealer {
+  margin-bottom: 80px;
+}
+
+/* NAV FIX */
+nav a {
+  color: #9ca3af;
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* КНОПКА В ХЕДЕРЕ */
+.nav-btn {
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
