@@ -101,34 +101,70 @@
     <h2>Обслуживание и ремонт</h2>
 
     <div class="cards">
-      <div class="card">Диагностика</div>
-      <div class="card">Ремонт</div>
-      <div class="card">Обслуживание</div>
-      <div class="card">Аварийные выезды</div>
-    </div>
 
+  <div class="card">
+    <div class="card-title">Диагностика</div>
+    <div class="card-desc">Быстрое выявление неисправностей</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Ремонт</div>
+    <div class="card-desc">Восстановление оборудования</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Обслуживание</div>
+    <div class="card-desc">Плановая поддержка систем</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Аварийные выезды</div>
+    <div class="card-desc">Реакция в день обращения</div>
+  </div>
+
+</div>
+    
   </div>
 </section>
 
 <!-- DEALER -->
 <section class="section gray" id="dealer">
-  <div class="container narrow">
+  <div class="container">
 
-    <h2>Официальный дилер</h2>
+    <div class="dealer-box">
 
-    <p>
-      Прямые поставки с заводов.  
-      Оборудование и комплектующие — без посредников.
-    </p>
+      <div class="dealer-left">
+        <h2>Официальный дилер</h2>
+        <p class="dealer-text">
+          Прямые поставки оборудования и комплектующих с заводов.
+          Без посредников и с гарантией наличия.
+        </p>
+      </div>
 
-    <ul class="list">
-      <li>сокращение сроков</li>
-      <li>наличие оборудования</li>
-      <li>без заморозки бюджета</li>
-    </ul>
+      <div class="dealer-right">
+
+        <div class="dealer-item">
+          <div class="dealer-num">2</div>
+          <div class="dealer-label">завода-партнёра</div>
+        </div>
+
+        <div class="dealer-item">
+          <div class="dealer-num">0</div>
+          <div class="dealer-label">наценки посредников</div>
+        </div>
+
+        <div class="dealer-item">
+          <div class="dealer-num">100%</div>
+          <div class="dealer-label">контроль поставок</div>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 </section>
+ 
 
 <!-- CONTACT -->
 <section class="section gray" id="contacts">
@@ -202,5 +238,17 @@ els.forEach(el => {
 });
 </script>
 
+  <script>
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
+  
 </body>
 </html>
