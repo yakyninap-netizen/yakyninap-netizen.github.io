@@ -231,3 +231,122 @@ nav a:hover {
 h2 {
   margin-bottom: 30px;
 }
+
+/* sticky header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* при скролле */
+.header.scrolled {
+  background: rgba(2,6,23,0.95);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* микро-движение */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* hero glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 60%);
+  top: -200px;
+  left: -200px;
+  filter: blur(60px);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* плавное появление цифр */
+.stat {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: rise 0.8s ease forwards;
+}
+
+.stat:nth-child(1){animation-delay:0.2s}
+.stat:nth-child(2){animation-delay:0.4s}
+.stat:nth-child(3){animation-delay:0.6s}
+
+@keyframes rise {
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.dealer-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.dealer-text {
+  color: var(--muted);
+  margin-top: 15px;
+  max-width: 400px;
+}
+
+.dealer-right {
+  display: flex;
+  gap: 40px;
+}
+
+.dealer-item {
+  text-align: center;
+}
+
+.dealer-num {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.dealer-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
