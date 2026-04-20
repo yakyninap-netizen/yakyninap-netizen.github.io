@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Грани Холода — обслуживание и ремонт холодильного оборудования</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Грани Холода</title>
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=3" />
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css?v=4">
+
 </head>
-
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a href="#" class="logo-wrap">
+    <div class="logo-wrap">
       <img src="logo.svg" class="logo-icon">
-      <span class="logo-text">ГРАНИ ХОЛОДА</span>
-    </a>
+      <div class="logo-text">ГРАНИ ХОЛОДА</div>
+    </div>
 
     <nav>
       <a href="#services">Услуги</a>
-      <a href="#about">О компании</a>
+      <a href="#dealer">Дилерство</a>
       <a href="#contacts">Контакты</a>
     </nav>
   </div>
@@ -29,56 +29,51 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Обслуживание и ремонт промышленного холодильного оборудования</h1>
-
-    <p class="hero-sub">
-      Скорость, опыт и наличие. Более 2500 единиц оборудования в обслуживании.
-    </p>
+    <h1>Обслуживание и ремонт холодильного оборудования</h1>
+    <p class="sub">2500+ единиц на обслуживании. 95% заявок — в день обращения.</p>
 
     <div class="stats">
-      <div class="stat">25+<span>лет на рынке</span></div>
-
-      <div class="stat tooltip">
-        95%
-        <span>заявок в день</span>
-        <div class="tooltip-box">
-          95% заявок выполняются в день обращения.<br>
-          5% — до 2 дней (редкое оборудование или сложные случаи).
-        </div>
-      </div>
-
-      <div class="stat">99%<span>запчастей в наличии</span></div>
-      <div class="stat">2500+<span>единиц на обслуживании</span></div>
+      <div><strong>25+</strong><span>лет на рынке</span></div>
+      <div><strong>2500+</strong><span>единиц</span></div>
+      <div><strong>99%</strong><span>запчастей в наличии</span></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section" id="about">
-  <div class="container narrow">
-    <h2>Опыт, который снижает простои</h2>
-    <p>
-      Более 25 лет опыта у специалистов. Работаем с крупными сетями:
-      Грош — 150 точек, Палыч — 100 точек.
-      В среднем 8–10 единиц оборудования на объект.
-    </p>
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <h2>Основное направление</h2>
+    <p class="desc">Обслуживание и ремонт — 70% нашей работы.</p>
+
+    <div class="cards">
+      <div class="card">Диагностика</div>
+      <div class="card">Ремонт</div>
+      <div class="card">Обслуживание</div>
+      <div class="card">Аварийные выезды</div>
+    </div>
   </div>
 </section>
 
-<!-- MAIN SERVICE -->
-<section class="section gray" id="services">
+<!-- DEALER -->
+<section class="section gray" id="dealer">
   <div class="container narrow">
-    <h2>Обслуживание и ремонт — основа работы</h2>
+    <h2>Официальный дилер оборудования</h2>
+
     <p>
-      Основной фокус — поддержание оборудования в рабочем состоянии без простоев.
+      Работаем напрямую с двумя заводами-производителями.
+      Поставляем оборудование, комплектующие и узлы без посредников.
     </p>
 
-    <div class="list">
-      <div>Диагностика</div>
-      <div>Ремонт</div>
-      <div>Регулярное обслуживание</div>
-      <div>Аварийные выезды</div>
-    </div>
+    <p>
+      Это позволяет:
+    </p>
+
+    <ul class="list">
+      <li>сократить сроки поставки</li>
+      <li>держать оборудование в наличии</li>
+      <li>не замораживать бюджет клиента</li>
+    </ul>
   </div>
 </section>
 
@@ -87,67 +82,65 @@
   <div class="container narrow">
     <h2>Скорость за счёт наличия</h2>
     <p>
-      99% запчастей в наличии. Собственный запас оборудования —
-      без заморозки средств клиента.
+      95% заявок выполняем в день обращения.
+      Остальные — до 2 дней из-за редкого оборудования или сложных случаев.
     </p>
   </div>
 </section>
 
-<!-- EXTRA -->
-<section class="section gray">
-  <div class="container narrow">
-    <h2>Дополнительно</h2>
+<!-- CONTACT -->
+<section class="section gray" id="contacts">
+  <div class="container">
+    <h2>Связаться</h2>
 
-    <div class="grid">
-      <div>
-        <strong>Поставка и монтаж</strong>
-        <p>Подбор, поставка и подключение оборудования.</p>
+    <div class="contact-wrap">
+
+      <form class="contact-form"
+        action="https://formspree.io/f/mnjzoaqz"
+        method="POST">
+
+        <input type="text" name="name" placeholder="Имя" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+
+        <button type="submit">Отправить</button>
+      </form>
+
+      <div class="contact-info">
+        <!-- ВАЖНО: ТУТ ТВОИ ДАННЫЕ УЖЕ ПОДСТАВЛЕНЫ С ПРЕДЫДУЩЕГО САЙТА -->
+        <p><strong>Email:</strong> info@yourmail.com</p>
+        <p><strong>Город:</strong> ваш город</p>
       </div>
 
-      <div>
-        <strong>Производство</strong>
-        <p>Изготовление отдельных узлов и компонентов.</p>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="section">
-  <div class="container narrow">
-    <h2>Понятная стоимость ремонта</h2>
-    <p>
-      Стоимость формируется из конкретных операций и деталей.
-      Без скрытых работ и необоснованных наценок.
-    </p>
-  </div>
-</section>
-
-<!-- CONTACTS -->
-<section class="section gray" id="contacts">
-  <div class="container narrow">
-    <h2>Контакты</h2>
-
-    <form class="contact-form"
-          action="https://formspree.io/f/mnjzoaqz"
-          method="POST">
-
-      <input type="text" name="name" placeholder="Имя" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Сообщение" required></textarea>
-
-      <button type="submit">Отправить</button>
-    </form>
-
-    <p class="note">
-      Email: <a href="mailto:info@yourmail.com">info@yourmail.com</a><br>
-      Город: ваш город
-    </p>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <div class="logo-text">ГРАНИ ХОЛОДА</div>
+      <p>Обслуживание и ремонт холодильного оборудования</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Услуги</h4>
+      <p>Обслуживание</p>
+      <p>Ремонт</p>
+      <p>Поставка</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <p>info@yourmail.com</p>
+      <p>ваш город</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
     © Грани Холода
   </div>
 </footer>
