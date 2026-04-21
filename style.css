@@ -438,3 +438,16 @@ nav {
   color: #fff;
   text-decoration: none;
 }
+
+/* МЕНЮ В ОДНУ ЛИНИЮ */
+nav {
+  display: flex;
+  align-items: center;   /* ← ключевое */
+  gap: 24px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  height: 40px;          /* ← фикс высоты */
+}
