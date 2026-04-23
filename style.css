@@ -458,49 +458,25 @@ nav a {
   color: #6b7280;
 }
 
+/* =========================
+   MOBILE FINAL CLEAN
+========================= */
+
 @media (max-width: 768px) {
 
-  /* контейнер — убираем правую пустоту */
+  /* контейнер */
   .container {
     padding: 0 16px;
-    max-width: 100%;
   }
 
-  /* HEADER */
-  .header-inner {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  /* скрываем меню (оно ломает всё) */
-  nav {
-    display: none;
-  }
-
-  /* телефон компактно */
-  .header-contact {
-    align-items: flex-end;
-  }
-
-  .header-contact span {
-    font-size: 11px;
-  }
-
-  .header-contact a {
-    font-size: 14px;
-  }
-
-  /* HERO */
+  /* HERO — фикс отступа */
   .hero {
-    padding: 90px 0 60px;
+    padding: 80px 0 60px;
   }
 
   .hero h1 {
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.25;
   }
 
   .hero-sub {
@@ -508,43 +484,31 @@ nav a {
     margin-bottom: 20px;
   }
 
-  /* фикс кривого текста "Самара" */
   .hero-geo {
     font-size: 13px;
-    margin-bottom: 10px;
-    padding-left: 2px;
+    margin-bottom: 8px;
+    padding-left: 2px; /* фикс уезда */
   }
 
-  /* STATS */
+  /* СТАТИСТИКА */
   .stats {
     flex-direction: column;
     gap: 16px;
   }
 
-  .num {
-    font-size: 26px;
-  }
-
-  /* CLIENTS */
-  .clients-grid {
+  /* FOOTER — САМОЕ ВАЖНОЕ */
+  .footer-inner {
     flex-direction: column;
     gap: 20px;
   }
 
-  /* CARDS */
-  .cards {
-    grid-template-columns: 1fr;
+  .footer-inner div {
+    width: 100%;
   }
 
-  /* DEALER */
-  .dealer-box {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* CONTACT */
-  .contact-wrap {
-    flex-direction: column;
+  /* EMAIL НЕ ЛОМАЕТСЯ */
+  .footer p {
+    word-break: break-word;
   }
 
 }
