@@ -458,79 +458,77 @@ nav a {
   color: #6b7280;
 }
 
-/* =========================
-   MOBILE VERSION
-========================= */
-
 @media (max-width: 768px) {
 
-  /* контейнер */
+  /* контейнер — убираем правую пустоту */
   .container {
     padding: 0 16px;
+    max-width: 100%;
   }
 
   /* HEADER */
   .header-inner {
-    height: auto;
-    padding: 12px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .header-right {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav {
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    height: auto;
+    padding: 10px 0;
   }
 
+  /* скрываем меню (оно ломает всё) */
+  nav {
+    display: none;
+  }
+
+  /* телефон компактно */
   .header-contact {
-    align-items: flex-start;
+    align-items: flex-end;
+  }
+
+  .header-contact span {
+    font-size: 11px;
+  }
+
+  .header-contact a {
+    font-size: 14px;
   }
 
   /* HERO */
   .hero {
-    padding: 100px 0 80px;
+    padding: 90px 0 60px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.2;
   }
 
   .hero-sub {
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  /* фикс кривого текста "Самара" */
+  .hero-geo {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-left: 2px;
   }
 
   /* STATS */
   .stats {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .num {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   /* CLIENTS */
-  .clients-box {
-    padding: 30px 20px;
-  }
-
   .clients-grid {
     flex-direction: column;
-    gap: 25px;
-  }
-
-  .client-num {
-    font-size: 32px;
+    gap: 20px;
   }
 
   /* CARDS */
@@ -541,23 +539,12 @@ nav a {
   /* DEALER */
   .dealer-box {
     flex-direction: column;
-    gap: 30px;
-  }
-
-  .dealer-right {
-    justify-content: space-between;
+    gap: 20px;
   }
 
   /* CONTACT */
   .contact-wrap {
     flex-direction: column;
-    gap: 30px;
-  }
-
-  /* FOOTER */
-  .footer-inner {
-    flex-direction: column;
-    gap: 30px;
   }
 
 }
