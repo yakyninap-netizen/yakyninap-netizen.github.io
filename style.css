@@ -379,3 +379,65 @@ nav a:hover::after {
   }
 
 }
+
+.section {
+  padding: 140px 0;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.cards {
+  margin-top: 30px;
+}
+
+.dealer-box {
+  margin-top: 30px;
+}
+
+.hero-geo {
+  font-size: 16px;
+  color: #93c5fd; /* мягкий синий */
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.card {
+  padding: 28px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+}
+
+.dealer-box {
+  align-items: center;
+}
+
+.dealer-right {
+  gap: 60px;
+}
+
+.dealer-num {
+  font-size: 42px;
+  color: #fff;
+}
+
+.dealer-label {
+  margin-top: 6px;
+}
+
+.clients-box,
+.card,
+.dealer-box {
+  backdrop-filter: blur(6px);
+}
