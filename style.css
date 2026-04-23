@@ -452,6 +452,12 @@ nav a {
   height: 40px;          /* ← фикс высоты */
 }
 
+.hero-geo {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
 /* =========================
    MOBILE VERSION
 ========================= */
