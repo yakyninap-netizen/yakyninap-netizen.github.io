@@ -512,3 +512,34 @@ nav a {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  /* УБИРАЕМ ЛЮБУЮ ПРАВУЮ ПУСТОТУ */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  /* HERO РАСТЯГИВАЕМ */
+  .hero .container {
+    width: 100%;
+  }
+
+  /* ГЛАВНОЕ — фикс сжатия */
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* УБИРАЕМ ВОЗМОЖНЫЙ СДВИГ */
+  .hero,
+  .clients,
+  .section {
+    overflow: hidden;
+  }
+
+}
