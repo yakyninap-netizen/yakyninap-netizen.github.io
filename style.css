@@ -451,3 +451,107 @@ nav a {
   align-items: center;
   height: 40px;          /* ← фикс высоты */
 }
+
+/* =========================
+   MOBILE VERSION
+========================= */
+
+@media (max-width: 768px) {
+
+  /* контейнер */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* HEADER */
+  .header-inner {
+    height: auto;
+    padding: 12px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-contact {
+    align-items: flex-start;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 100px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* STATS */
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .num {
+    font-size: 28px;
+  }
+
+  /* CLIENTS */
+  .clients-box {
+    padding: 30px 20px;
+  }
+
+  .clients-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .client-num {
+    font-size: 32px;
+  }
+
+  /* CARDS */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* DEALER */
+  .dealer-box {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .dealer-right {
+    justify-content: space-between;
+  }
+
+  /* CONTACT */
+  .contact-wrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+}
