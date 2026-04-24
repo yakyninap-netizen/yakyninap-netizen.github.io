@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="style.css?v=final">
 </head>
 
-  <a href="tel:+79171581364" class="call-btn">Позвонить</a>
-  
-  <body>
+<body>
+
+<!-- КНОПКА ЗВОНКА -->
+<a href="tel:+79171581364" class="call-btn">Позвонить</a>
 
 <!-- HEADER -->
 <header class="header">
@@ -38,7 +39,6 @@
   </div>
 </header>
 
-
 <!-- HERO -->
 <section class="hero">
   <div class="container">
@@ -52,8 +52,8 @@
     </div>
 
     <a href="#contacts" class="hero-btn">Оставить заявку</a>
-    
-    <div class="stats">
+
+    <div class="stats fade-up">
       <div class="stat">
         <div class="num">25+</div>
         <div class="label">лет опыта</div>
@@ -70,18 +70,18 @@
       </div>
     </div>
 
+    <div class="trust-line">
+      Работаем с сетями: Грош, Палыч и другими
+    </div>
+
   </div>
 </section>
 
-    <div class="trust-line">
-  Работаем с сетями: Грош, Палыч и другими
-</div>
-    
 <!-- CLIENTS -->
 <section class="section clients">
   <div class="container">
 
-    <div class="clients-box">
+    <div class="clients-box fade-up">
       <div class="panel-title">СЕТЕВЫЕ ОБЪЕКТЫ</div>
       <div class="panel-line"></div>
 
@@ -106,7 +106,6 @@
   </div>
 </section>
 
-
 <!-- SERVICES -->
 <section id="services" class="section">
   <div class="container">
@@ -115,22 +114,22 @@
 
     <div class="cards">
 
-      <div class="card">
+      <div class="card fade-up">
         <div class="card-title">Диагностика</div>
         <div class="card-desc">Быстрое выявление неисправностей</div>
       </div>
 
-      <div class="card">
+      <div class="card fade-up">
         <div class="card-title">Ремонт</div>
         <div class="card-desc">Восстановление оборудования</div>
       </div>
 
-      <div class="card">
+      <div class="card fade-up">
         <div class="card-title">Обслуживание</div>
         <div class="card-desc">Плановая поддержка систем</div>
       </div>
 
-      <div class="card">
+      <div class="card fade-up">
         <div class="card-title">Аварийные выезды</div>
         <div class="card-desc">Реакция в день обращения</div>
       </div>
@@ -140,14 +139,13 @@
   </div>
 </section>
 
-
 <!-- DEALER -->
 <section id="dealer" class="section">
   <div class="container">
 
     <h2>Официальный дилер</h2>
 
-    <div class="dealer-box">
+    <div class="dealer-box fade-up">
 
       <div>
         <div class="dealer-text">
@@ -180,7 +178,6 @@
   </div>
 </section>
 
-
 <!-- CONTACT -->
 <section id="contacts" class="section">
   <div class="container">
@@ -205,7 +202,6 @@
 
   </div>
 </section>
-
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -236,10 +232,7 @@
   </div>
 </footer>
 
-
-</body>
-</html>
-
+<!-- ANIMATION -->
 <script>
 const elements = document.querySelectorAll('.fade-up');
 
@@ -253,3 +246,6 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 </script>
+
+</body>
+</html>
