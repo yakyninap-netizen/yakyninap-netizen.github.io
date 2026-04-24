@@ -461,6 +461,12 @@ h2 {
   box-shadow: 0 10px 30px rgba(59,130,246,0.4);
 }
 
+.trust-line {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
 .call-btn {
   position: fixed;
   bottom: 20px;
