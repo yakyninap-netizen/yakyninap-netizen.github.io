@@ -1,11 +1,12 @@
 :root {
-  --bg: #f8fafc;
-  --bg-soft: #ffffff;
-  --text: #0f172a;
+  --bg: #020617;
+  --bg-soft: #0b1220;
+  --text: #e5e7eb;
   --muted: #6b7280;
-  --accent: #2563eb;
+  --accent: #3b82f6;
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -15,19 +16,10 @@ body {
   font-family: Inter, sans-serif;
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
   line-height: 1.5;
 }
 
-h1 {
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  margin-bottom: 40px;
-  letter-spacing: -0.01em;
-}
-
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -40,15 +32,9 @@ h2 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(2,6,23,0.7);
+  background: rgba(2,6,23,0.75);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  transition: 0.3s;
-}
-
-.header.scrolled {
-  background: rgba(2,6,23,0.95);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .header-inner {
@@ -66,7 +52,7 @@ h2 {
 
 .logo-icon {
   width: 22px;
-  filter: drop-shadow(0 0 12px rgba(59,130,246,0.8));
+  filter: drop-shadow(0 0 10px rgba(59,130,246,0.6));
 }
 
 .logo-text {
@@ -81,7 +67,6 @@ h2 {
 }
 
 /* NAV */
-
 nav {
   display: flex;
   gap: 24px;
@@ -92,10 +77,6 @@ nav a {
   text-decoration: none;
   font-size: 14px;
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 40px;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -105,8 +86,8 @@ nav a:hover {
 nav a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -4px;
+  left: 0;
   width: 0;
   height: 1px;
   background: var(--accent);
@@ -123,22 +104,18 @@ nav a:hover::after {
   border-radius: 6px;
 }
 
-/* CONTACT IN HEADER */
-
+/* CONTACT */
 .header-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  text-align: right;
 }
 
 .header-contact span {
-  font-size: 13px;
-  color: #9ca3af;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .header-contact a {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
   color: #fff;
   text-decoration: none;
 }
@@ -149,16 +126,13 @@ nav a:hover::after {
   padding: 140px 0 120px;
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(59,130,246,0.2), transparent 40%),
-    radial-gradient(circle at 80% 20%, rgba(59,130,246,0.08), transparent 40%);
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 60%);
   top: -200px;
   left: -200px;
@@ -166,15 +140,15 @@ nav a:hover::after {
 }
 
 .hero-geo {
-  font-size: 18px;
+  font-size: 16px;
   color: #93c5fd;
   margin-bottom: 16px;
-  font-weight: 500;
 }
 
 .hero h1 {
-  font-size: 54px;
+  font-size: 52px;
   margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 .hero-sub {
@@ -191,7 +165,6 @@ nav a:hover::after {
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -200,9 +173,10 @@ nav a:hover::after {
   box-shadow: 0 10px 30px rgba(59,130,246,0.4);
 }
 
+/* TRUST */
 .trust-line {
   margin-top: 20px;
-  color: #6b7280;
+  color: var(--muted);
   font-size: 14px;
 }
 
@@ -213,15 +187,20 @@ nav a:hover::after {
   gap: 80px;
 }
 
-.num {
+.stat .num {
   font-size: 36px;
   font-weight: 600;
 }
 
-.label {
-  margin-top: 6px;
+.stat .label {
   font-size: 13px;
   color: var(--muted);
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 120px 0;
 }
 
 /* ================= CLIENTS ================= */
@@ -230,7 +209,6 @@ nav a:hover::after {
   border: 1px solid rgba(255,255,255,0.08);
   padding: 60px;
   background: rgba(255,255,255,0.02);
-  backdrop-filter: blur(6px);
 }
 
 .panel-title {
@@ -251,7 +229,7 @@ nav a:hover::after {
 }
 
 .client-num {
-  font-size: 42px;
+  font-size: 40px;
 }
 
 .client-text {
@@ -272,14 +250,13 @@ nav a:hover::after {
   padding: 28px;
   border-radius: 12px;
   background: rgba(255,255,255,0.02);
-  backdrop-filter: blur(6px);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
   border-color: var(--accent);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
 .card-title {
@@ -300,7 +277,11 @@ nav a:hover::after {
   gap: 60px;
   align-items: center;
   margin-top: 30px;
-  backdrop-filter: blur(6px);
+}
+
+.dealer-text {
+  max-width: 420px;
+  color: var(--muted);
 }
 
 .dealer-right {
@@ -313,7 +294,7 @@ nav a:hover::after {
 }
 
 .dealer-label {
-  margin-top: 6px;
+  font-size: 13px;
   color: var(--muted);
 }
 
@@ -327,7 +308,7 @@ nav a:hover::after {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 12px;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.1);
@@ -337,11 +318,11 @@ nav a:hover::after {
 .contact-form button {
   width: 100%;
   padding: 14px;
-  font-size: 16px;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   border: none;
   border-radius: 8px;
   color: #fff;
+  cursor: pointer;
 }
 
 /* ================= FOOTER ================= */
@@ -351,13 +332,13 @@ nav a:hover::after {
   padding: 80px 0 30px;
 }
 
-.footer {
-  background: #f1f5f9;
-}
-
 .footer-inner {
   display: flex;
   justify-content: space-between;
+}
+
+.footer p {
+  color: var(--muted);
 }
 
 /* ================= CALL BUTTON ================= */
@@ -366,7 +347,7 @@ nav a:hover::after {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #3b82f6;
+  background: var(--accent);
   color: #fff;
   padding: 14px 18px;
   border-radius: 50px;
@@ -392,11 +373,6 @@ nav a:hover::after {
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-
-  .container {
-    padding: 0 16px;
-    max-width: 100%;
-  }
 
   nav {
     display: none;
@@ -432,59 +408,4 @@ nav a:hover::after {
     flex-direction: column;
     gap: 25px;
   }
-
-}
-
-/* ================= LIGHT MODE OVERRIDE ================= */
-
-body {
-  background: #f8fafc;
-  color: #0f172a;
-}
-
-/* header */
-.header {
-  background: rgba(255,255,255,0.8);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* nav */
-nav a {
-  color: #475569;
-}
-
-nav a:hover {
-  color: #0f172a;
-}
-
-/* карточки */
-.card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* clients */
-.clients-box {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-}
-
-/* dealer */
-.dealer-box {
-  background: transparent;
-}
-
-/* footer */
-.footer {
-  background: #f1f5f9;
-}
-
-/* текст */
-.hero-sub,
-.label,
-.client-text,
-.dealer-label,
-.footer p {
-  color: #6b7280;
 }
