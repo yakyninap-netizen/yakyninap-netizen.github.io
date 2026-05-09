@@ -499,27 +499,25 @@ nav a {
   text-decoration: none;
 }
 
-/* WATERMARK LOGO */
-
+/* ================= WATERMARK ================= */
 .hero-watermark {
   position: absolute;
-  right: -120px;
+  right: -100px; /* сдвиг вправо за пределы контейнера */
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.05;
+  opacity: 0.05; /* прозрачность */
 }
 
 .hero-watermark img {
-  width: 700px;
+  width: 600px; /* размер логотипа */
   filter:
-    blur(1px)
-    drop-shadow(0 0 80px rgba(37,99,235,0.25));
+    blur(2px) /* размытие */
+    drop-shadow(0 0 100px rgba(37,99,235,0.25)); /* мягкое свечение */
 }
 
 /* HERO CONTENT ABOVE */
-
 .hero .container {
   position: relative;
   z-index: 2;
