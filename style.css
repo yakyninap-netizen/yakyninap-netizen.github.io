@@ -522,3 +522,25 @@ nav a {
   position: relative;
   z-index: 2;
 }
+
+.hero-watermark:first-child {
+  z-index: 0; /* фон куба */
+  opacity: 0.05;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-watermark:last-child {
+  z-index: 1; /* основной логотип */
+  opacity: 0.1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
