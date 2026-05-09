@@ -440,3 +440,34 @@ h2 {
     padding: 30px;
   }
 }
+
+/* FIX HEADER ALIGN */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.header-contact a {
+  margin-top: 2px;
+}
